@@ -1,4 +1,120 @@
+$page-width : 1024px;
+
+$header-background : #000000;
+$header-link-color : rgb(255, 255, 255);
+$header-text-color : $header-link-color;
+
 body {
-    background-color: black;
-    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    max-width: $page-width;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: $header-text-color;
+
+    background: $header-background;
+
+    h1 {
+        margin: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 25px;
+        color: $header-link-color;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .login-link {
+        display: flex;
+        margin-left: auto;
+        color: $header-link-color;
+
+    }
+}
+
+.main-content {
+    max-width: $page-width;
+    margin: auto;
+
+}
+
+#flexible {
+    display: flex;
+}
+
+aside {
+    float: right;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+footer {
+    max-width: $page-width;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+// Login specific styles
+$login-btns-roundness : 10px;
+
+$login-btns-padding-vert : 10px;
+$login-btns-padding-hori : 25px;
+
+$submit-btn-color : #5deb5d;
+$reset-btn-color : rgb(214, 94, 94);
+
+
+
+#login-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+#login-header {
+    h2 {
+        text-transform: uppercase;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 5px;
+        border-style: solid;
+    }
+}
+
+#login-form {
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+
+    input[type=submit] {
+        background-color: $submit-btn-color;
+
+        padding-top: $login-btns-padding-vert;
+        padding-bottom: $login-btns-padding-vert;
+        padding-left: $login-btns-padding-hori;
+        padding-right: $login-btns-padding-hori;
+        border-radius: $login-btns-roundness;
+    }
+
+    input[type=reset] {
+        background-color: $reset-btn-color;
+        padding-top: $login-btns-padding-vert;
+        padding-bottom: $login-btns-padding-vert;
+        padding-left: $login-btns-padding-hori;
+        padding-right: $login-btns-padding-hori;
+        border-radius: $login-btns-roundness;
+    }
 }
