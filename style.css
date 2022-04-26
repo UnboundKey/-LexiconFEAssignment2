@@ -9,8 +9,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   background: #000000;
 }
@@ -23,6 +23,12 @@ header a {
   text-decoration: none;
   padding: 25px;
   color: white;
+  font-weight: 2rem;
+}
+
+header a:hover {
+  color: #000000;
+  background-color: #aaa;
 }
 
 header ul {
@@ -46,12 +52,27 @@ header .login-link {
 .main-content {
   max-width: 1024px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-content .articles-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
 }
 
 #flexible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+article {
+  float: left;
+  margin: 5px;
 }
 
 aside {
@@ -105,5 +126,4 @@ footer {
   padding-right: 25px;
   border-radius: 10px;
 }
-
 /*# sourceMappingURL=style.css.map */

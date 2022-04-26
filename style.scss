@@ -3,6 +3,8 @@ $page-width : 1024px;
 $header-background : #000000;
 $header-link-color : rgb(255, 255, 255);
 $header-text-color : $header-link-color;
+$header-link-hover-color : #000000; 
+$header-link-hover-background : #aaa;
 
 body {
     font-family: sans-serif;
@@ -25,6 +27,11 @@ header {
         text-decoration: none;
         padding: 25px;
         color: $header-link-color;
+        font-weight: 2rem;
+    }
+    a:hover {
+        color: $header-link-hover-color;
+        background-color: $header-link-hover-background;
     }
 
     ul {
@@ -46,13 +53,22 @@ header {
 .main-content {
     max-width: $page-width;
     margin: auto;
-
+    display: flex;
+    .articles-container {
+        display: grid;
+    grid-template-columns: 50% 50%;
+    
+    }
 }
 
 #flexible {
     display: flex;
 }
-
+article {
+    float: left;
+    margin: 5px;
+    
+}
 aside {
     float: right;
     padding-left: 50px;
